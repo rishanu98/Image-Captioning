@@ -7,10 +7,11 @@ Image caption generator is a process of recognizing the context of an image and 
 
 ### Encoder
 * The Vision Transformer, or ViT, is a model for image classification that employs a Transformer-like architecture over patches of the image. An image is split into fixed-size patches, each of them are then linearly embedded, position embeddings are added, and the resulting sequence of vectors is fed to a standard Transformer encoder. In order to perform classification, the standard approach of adding an extra learnable “classification token” to the sequence is used *
+![](vit.png)
 
 ### Decoder 
 * GPT-2 is a transformers model pretrained on a very large corpus of English data in a self-supervised fashion. inputs are sequences of continuous text of a certain length and the targets are the same sequence, shifted one token (word or piece of word) to the right. The model uses internally a mask-mechanism to make sure the predictions for the token i only uses the inputs from 1 to i but not the future tokens. This way, the model learns an inner representation of the English language that can then be used to extract features useful for downstream tasks. The model is best at what it was pretrained for however, which is generating texts from a prompt. *
-![](vit.png)
+![](decoder.png)
 
 ### Data Collection from Dataset
 * The Flickr-8K dataset contains 8,000 images, each with five textual descriptions, making a total of 40,000 descriptions. The first step in the project is to 
